@@ -20,5 +20,5 @@ function loadDoc() {
       x[i].getElementsByTagName("product")[0].childNodes[0].nodeValue +
       "</td></tr>";
     }
-    document.getElementById("data").innerHTML = table;
+    document.getElementById("demo").innerHTML = table;
   }
