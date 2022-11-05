@@ -2,7 +2,6 @@ function showResult(str) {
   if (str.length == 0) {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-      document.getElementById(item).visibility = "visible";
       myFunction(this);
     }
     xhttp.open("GET", "dynamicXML.xml");
@@ -11,7 +10,7 @@ function showResult(str) {
   var xmlhttp=new XMLHttpRequest();
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200) {
-      document.getElementById("item").innerHTML=this.responseText;
+      document.getElementById(item).innerHTML = this.responseText;
     }
   }
   xmlhttp.open("GET","serverScript.php?q="+str,true);
