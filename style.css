@@ -129,6 +129,7 @@ body{
     padding: 10px;
 }
 .item_wrap{
+    min-width: 100%;
     border-radius: 6px;
     border: 1px solid #cbd0cb;
     padding: 10px;

@@ -15,15 +15,17 @@ function myFunction(xml) {
   for (let i = 0; i < x.length; i++) { 
     table += "<div class='item_wrap'> <h1>" +
     x[i].getElementsByTagName("company")[0].childNodes[0].nodeValue +
-    "</h1>Product : " +
+    "</h1><b>Product : </b>" +
     x[i].getElementsByTagName("product")[0].childNodes[0].nodeValue +
-    "<br>Prices : " +
+    "<br><b>Prices : </b>" +
     x[i].getElementsByTagName("prices")[0].childNodes[0].nodeValue +
     "<br><img src='" +
     x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +
-    "' alt='Product Image'><br>URL : " +
+    "' alt='Product Image'><br><b>URL : </b><a href='" +
     x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
-    "</div>";
+    "'>" +
+    x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
+    "</a></div>";
   }
   document.getElementById("item").innerHTML = table;
 }
