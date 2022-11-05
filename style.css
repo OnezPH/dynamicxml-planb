@@ -128,3 +128,12 @@ body{
     border-radius: 6px;
     padding: 10px;
 }
+.item_wrap{
+    border-radius: 6px;
+    border: 1px solid #cbd0cb;
+    padding: 10px;
+    margin: 10px;
+}
+.item_wrap > img{
+    width: 200px;
+}
