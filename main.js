@@ -22,7 +22,7 @@ function myFunction(xml) {
     "<br><img src='" +
     x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +
     "' alt='Product Image'><br>URL : " +
-    x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +
+    x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
     "</div>";
   }
   document.getElementById("item").innerHTML = table;
