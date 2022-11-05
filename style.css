@@ -5,28 +5,125 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #fff;
+    background-color: #ececec;
     font-family: 'Poppins', sans-serif;
 }
-.form{
-    width: 360px;
-
-    background-color: #e5e8ec;
-    border: 1px solid #cbd0d8;
-    border-radius: 6px;
-
-    margin: 20px;
-    padding: 10px;
-}
-.field{
+.header{
     width: 100%;
+    height: 70px;
+
+    background-color: #5e9dea;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-wrap{
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+.logo,
+.social-icon{
+    display: flex;
     align-items: center;
 }
-.t1, button{
-    margin-left: 20px;
+.logo > img{
+    width: 50px;
 }
-#data{
-    margin: 20px;
+.logo > h1{
+    font-weight: 700;
+    color: #fff;
+}
+.social-icon > a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.search-con{
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon > button{
+    width: 130px;
+    height: 40px;
+
+    outline: none;
+    background: none;
+    border-radius: 6px;
+    border: 2px solid #fff;
+
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.search-wrap{
+    background-color: #5e9dea;
+    border-radius: 6px;
+
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+.search-wrap > input{
+    width: 370px;
+    height: 40px;
+
+    background: #4c83c7;
+    outline: none;
+    border: none;
+
+    border-radius: 50px 0 0 50px;
+
+    padding: 0 0 0 45px;
+    color: #fff;
+}
+.search-wrap > input::placeholder{
+    color: #ececec;
+}
+.search-wrap > button{
+    width: 100px;
+    height: 40px;
+    border-radius: 0 50px 50px 0;
+
+    outline: none;
+    border: none;
+    background-color: #fff;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+
+    cursor: pointer;
+}
+.search-wrap > i{
+    position: absolute;
+    top: 42%;
+    left: 11%;
+
+    font-size: 25px;
+    color: #fff;
+}
+.item-con{
+    width: 100%;
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+}
+#item{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 6px;
 }

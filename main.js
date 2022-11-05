@@ -1,24 +1,15 @@
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-      }
-    };
-    xhttp.open("GET", "dynamicXML.xml", true);
-    xhttp.send();
+function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
   }
-  function myFunction(xml) {
-    var i;
-    var xmlDoc = xml.responseXML;
-    var table="<tr><th>Title</th><th>Artist</th></tr>";
-    var x = xmlDoc.getElementsByTagName("link");
-    for (i = 0; i <x.length; i++) {
-      table += "<tr><td>" +
-      x[i].getElementsByTagName("company")[0].childNodes[0].nodeValue +
-      "</td><td>" +
-      x[i].getElementsByTagName("product")[0].childNodes[0].nodeValue +
-      "</td></tr>";
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("item").innerHTML=this.responseText;
     }
-    document.getElementById("demo").innerHTML = table;
   }
+  xmlhttp.open("GET","server.php?q="+str,true);
+  xmlhttp.send();
+}

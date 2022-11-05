@@ -6,40 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic XML</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="asset/logo.png">
 </head>
 <body>
-    <div class="form">
-        <h2>Form</h2>
-        <form action="server.php">
-            <div class="field">
-                
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <img src="asset/logo.png" alt="Logo">
+                <h1>OnezPH</h1>
             </div>
-            <div class="field">
-                <label for="companyname">Company : </label>
-                <input id="companyname" type="text">
+            <div class="social-icon">
+                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <button>Add</button>
             </div>
-            <div class="field">
-                <label for="product">Product : </label>
-                <input type="text" id="product">
-            </div>
-            <div class="field">
-                <label for="prices">Prices : </label>
-                <input type="text" id="prices">
-            </div>
-            <div class="field">
-                <label for="image">Image : </label>
-                <input id="image" type="file">
-            </div>
-            <div class="field">
-                <label for="url">URL : </label>
-                <input id="url" type="text">
-            </div>
-            <input type="submit">
-        </form>
+        </div>
     </div>
-    <h1 class="t1">XML data</h1>
-    <button type="button" onclick="loadDoc()">Request Data</button>
-    <table id="demo"></table>
+    <div class="search-con">
+        <div class="search-wrap">
+            <i class='bx bx-search'></i>
+            <input type="text" onkeyup="showResult(this.value)" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </div>
+    <div class="item-con">
+        <div id="item"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
