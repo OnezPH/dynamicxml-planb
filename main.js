@@ -7,6 +7,16 @@ function showResult(str) {
     xhttp.open("GET", "dynamicXML.xml");
     xhttp.send();
   }
+<<<<<<< HEAD
+=======
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+    }
+  }
+  xmlhttp.open("GET","serverScript.php?q="+str,true);
+  xmlhttp.send();
+>>>>>>> 9a1963e7dcdacecf5ab60620e2577cf60c1fb388
 }
 function myFunction(xml) {
   const xmlDoc = xml.responseXML;
