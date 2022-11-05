@@ -2,7 +2,7 @@ function showResult(str) {
   if (str.length == 0) {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-      document.getElementById(item).display = "contents";
+      document.getElementById(item).visibility = "visible";
       myFunction(this);
     }
     xhttp.open("GET", "dynamicXML.xml");
