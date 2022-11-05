@@ -23,9 +23,7 @@ function myFunction(xml) {
     x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +
     "' alt='Product Image'><br><b>URL : </b><a href='" +
     x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
-    "'>" +
-    x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
-    "</a></div>";
+    "'>Product Link</a></div>";
   }
   document.getElementById("item").innerHTML = table;
 }
