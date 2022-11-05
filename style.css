@@ -122,7 +122,7 @@ body{
     display: flex;
     justify-content: center;
 }
-#livesearch{
+#item{
     width: 80%;
     background-color: #fff;
     border-radius: 6px;
