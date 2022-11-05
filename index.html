@@ -10,6 +10,24 @@
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" href="asset/logo.png">
+    <script>
+        function showResult(str) {
+            if (str.length==0) {
+                document.getElementById("item").innerHTML="";
+                document.getElementById("item").style.border="0px";
+                return;
+            }
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+                document.getElementById("item").innerHTML=this.responseText;
+                document.getElementById("item").style.border="1px solid #A5ACB2";
+            }
+            }
+            xmlhttp.open("GET","serverScript.php?q="+str,true);
+            xmlhttp.send();
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -37,6 +55,5 @@
     <div class="item-con">
         <div id="item"></div>
     </div>
-    <script src="main.js"></script>
 </body>
 </html>
