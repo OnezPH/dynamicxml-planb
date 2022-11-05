@@ -127,6 +127,7 @@ body{
     background-color: #fff;
     border-radius: 6px;
     padding: 10px;
+    display: none;
 }
 .item_wrap{
     min-width: 100%;
