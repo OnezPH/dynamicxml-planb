@@ -1,7 +1,6 @@
 function showResult(str) {
   if (str.length==0) {
-    document.getElementById("livesearch").innerHTML="";
-    document.getElementById("livesearch").style.border="0px";
+    document.getElementById("item").innerHTML="";
     return;
   }
   var xmlhttp=new XMLHttpRequest();
@@ -13,3 +12,4 @@ function showResult(str) {
   xmlhttp.open("GET","server.php?q="+str,true);
   xmlhttp.send();
 }
+console.log(showResult);
